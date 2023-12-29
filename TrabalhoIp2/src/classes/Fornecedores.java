@@ -29,7 +29,21 @@ public class Fornecedores{
             return true;
         }
     }
+    public void listarInformacaoArtigosFornecedor(){
+    for(int i = 0;i<quantidade;i++){
+    int id=listaArtigos[i];
+    pesquisaArtigos(id).listarInformacaoArtigo;
+    }    
+}
+public void listarInformacaoArtigoFornecedor(id){
+    for(int i = 0;i<quantidade;i++){
+    if(id==listaArtigos[i]){
+    pesquisaArtigos(id).listarInformacaoArtigo;
+    }
+    }
+}
 
+    
     @Override
     public String toString() {
         return "Fornecedores{" +
