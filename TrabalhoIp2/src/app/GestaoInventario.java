@@ -248,11 +248,20 @@ public class GestaoInventario {
     public void cmpArtigos(){
         System.out.println("Digite o id do artigo que deseja analisar o custo medio ponderado");
         int id= Integer.parseInt(sc.nextLine());
-
+        
+        System.out.println("selecione tipo moeda \n1-euro \n2-libra \n3-dollar");
+        int escolha= Integer.parseInt(sc.nextLine());
+        
         Artigos artigo = pesquisaArtigos(id);
 
         if (artigo != null && artigo.quantidade > 0) {
                 double cmp = ((artigo.preçoCompra*artigo.quantidade)/artigo.quantidade);
+            if (escolha == 2){
+                cmp *= cmp*0.87; 
+            } else if(escolha ==3){
+                cmp *= cmp*1.1;
+            }
+            
                 System.out.println("O custo medio ponderado do artigo selecionado é: "+cmp);
             }else if(artigo.quantidade <= 0)
                 System.out.println("A quantidade do artigo é zero, não é possível calcular o CMP.");                                     
