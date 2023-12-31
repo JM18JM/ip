@@ -12,6 +12,9 @@ public class Artigos {
 
         
     }
+public int quantidade(){
+ return quantidade;   
+}
     public void listarInformacaoArtigo (){
      System.out.println("quantidade"+quantidade);
      System.out.println("nome"+nome);
