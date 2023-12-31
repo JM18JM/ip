@@ -12,7 +12,7 @@ public class Artigos {
 
         
     }
-public int quantidade(){
+public int getQuantidade(){
  return quantidade;   
 }
     public void listarInformacaoArtigo (){
