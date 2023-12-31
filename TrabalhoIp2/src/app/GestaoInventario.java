@@ -18,21 +18,34 @@ public class GestaoInventario {
         n_artigos = 0;
     }
 
-    public Artigos listarArtigosPorQuantidade(){
-   
-        Artgios[] listaArtigosOrdenada;
-        int[] listaIndicesOrdenados;
-        int[] quantidadesArtigos;
-        
-        
-        
-        
-        
-        
-        for(int i = 0; i < n_artigos;i++){
-    listaArtigosOrdenada[i].listarInformacaoArtigo;   
-    } 
+   public void listarArtigosPorQuantidade(){
+
+        int[] listaIndicesOrdenados  = new int [n_artigos];
+        int[] quantidadesArtigos = new int [n_artigos];
+        int temp;
+    int i;
+    int j;
+
+    for ( int i = 0; i<n_artigos;i++){
+        listaIndicesOrdenados[i]=i;
+        quantidadesArtigos[i]= artigos[i].getQuantidade;
     }
+    for (i = 0; i < n_artigos - 1; i++) {
+            for (j = 0; j < n_artigos - i - 1; j++) {
+                    if (quantidadesArtigos[j] < quantidadesArtigos[j + 1]) {
+                        temp = quantidadesArtigos[j];
+                        quantidadesArtigos[j] = quantidadesArtigos[j + 1];
+                        quantidadesArtigos[j + 1] = temp;
+                        temp = listaIndicesOrdenados[j];
+                        listaIndicesOrdenados[j] = listaIndicesOrdenados[j + 1];
+                           listaIndicesOrdenados[j + 1] = temp;
+                    }
+            }
+        }
+        for(i = 0; i < n_artigos;i++){
+            artigos[listaIndicesOrdenados[i]].listarInformacaoArtigo;
+       } 
+}
     
     public boolean addArtigo(Scanner sc, GestaoFornecedores gf) {
         System.out.println("Digite o id do artigo");
