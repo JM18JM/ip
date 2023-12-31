@@ -19,8 +19,18 @@ public class GestaoInventario {
     }
 
     public Artigos listarArtigosPorQuantidade(){
-   for(int i = 0; i < n_artigos;i++){
-    listaArtigosOrdenada[i]   
+   
+        Artgios[] listaArtigosOrdenada;
+        int[] listaIndicesOrdenados;
+        int[] quantidadesArtigos;
+        
+        
+        
+        
+        
+        
+        for(int i = 0; i < n_artigos;i++){
+    listaArtigosOrdenada[i].listarInformacaoArtigo;   
     } 
     }
     
