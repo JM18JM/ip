@@ -18,6 +18,12 @@ public class GestaoInventario {
         n_artigos = 0;
     }
 
+    public Artigos listarArtigosPorQuantidade(){
+   for(int i = 0; i < n_artigos;i++){
+    listaArtigosOrdenada[i]   
+    } 
+    }
+    
     public boolean addArtigo(Scanner sc, GestaoFornecedores gf) {
         System.out.println("Digite o id do artigo");
         int id = Integer.parseInt(sc.nextLine());
